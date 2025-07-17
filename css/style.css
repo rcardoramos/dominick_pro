@@ -1,0 +1,38 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+ body {
+     font-family: 'Montserrat', sans-serif;
+     scroll-behavior: smooth;
+ }
+
+ .gold-text {
+     color: #ffbb00;
+ }
+
+ .blue-bg {
+     background-color: #0d3153;
+ }
+
+ .gold-bg {
+     background-color: #ffbb00;
+ }
+
+ .nav-item:hover {
+     color: #ffbb00 !important;
+     transition: all 0.3s ease;
+ }
+
+ .property-card:hover {
+     transform: translateY(-5px);
+     transition: all 0.3s ease;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ .testimonial-card {
+     transition: all 0.3s ease;
+ }
+
+ .testimonial-card:hover {
+     transform: scale(1.03);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+ }

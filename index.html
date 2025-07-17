@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominick Pro - Inmobiliaria de Excelencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="blue-bg text-white py-4 px-6 fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="text-xl font-bold gold-text"> <img src="./img/LOGO-DPI-1080-AL-LIMITE.png"
+                        alt="Logo Dominick Pro" class=" w-36"></a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-item text-white">Inicio</a>
+                <a href="#nosotros" class="nav-item text-white">Quiénes Somos</a>
+                <a href="#mision" class="nav-item text-white">Misión</a>
+                <a href="#servicios" class="nav-item text-white">Servicios</a>
+                <a href="#referidos" class="nav-item text-white">Programa de Referidos</a>
+                <a href="#contacto" class="nav-item text-white">Contacto</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="md:hidden hidden py-2" id="mobile-menu">
+            <a href="#inicio" class="block px-4 py-2 text-white">Inicio</a>
+            <a href="#nosotros" class="block px-4 py-2 text-white">Quiénes Somos</a>
+            <a href="#mision" class="block px-4 py-2 text-white">Misión</a>
+            <a href="#servicios" class="block px-4 py-2 text-white">Servicios</a>
+            <a href="#referidos" class="block px-4 py-2 text-white">Programa de Referidos</a>
+            <a href="#contacto" class="block px-4 py-2 text-white">Contacto</a>
+        </div>
+    </nav>
+
+    Hero Section
+    <section id="inicio" class="pt-24 pb-16 md:pt-32 md:pb-24 blue-bg text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Encuentra tu propiedad <span
+                        class="gold-text">ideal</span></h1>
+                <p class="text-lg mb-6 text-gray-200">Somos especialistas en conectar a las personas con los mejores
+                    espacios para vivir, trabajar y crecer.</p>
+                <div class="flex space-x-4">
+                    <a href="#contacto"
+                        class="gold-bg text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300">Contactar</a>
+                    <a href="#servicios"
+                        class="border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition duration-300">Nuestros
+                        Servicios</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://placehold.co/600x400"
+                    alt="Elegante edificio moderno con acabados de lujo y arquitectura contemporánea"
+                    class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+
+    <section id="nosotros" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 blue-text">¿Quiénes <span class="gold-text">Somos?</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Más que una inmobiliaria, somos sus socios en bienes raíces.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <img src="https://placehold.co/500x350"
+                        alt="Equipo profesional de Dominick Pro reunido en modernas oficinas"
+                        class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Expertos en Bienes Raíces</h3>
+                    <p class="text-gray-600 mb-4">Fundada en 2010, Dominick Pro ha crecido para convertirse en una de
+                        las inmobiliarias más respetadas en el mercado, gracias a nuestro enfoque profesional, ético y
+                        centrado en el cliente.</p>
+                    <p class="text-gray-600 mb-6">Nuestro equipo está compuesto por profesionales altamente capacitados,
+                        cada uno especializado en diferentes áreas del mercado inmobiliario, asegurando que usted reciba
+                        el asesoramiento más adecuado para sus necesidades.</p>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Más de 13 años de experiencia</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">500+ propiedades vendidas</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Clientes satisfechos</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Cobertura nacional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Misión -->
+
+    <section id="mision" class="py-16 blue-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-4">Nuestra <span class="gold-text">Misión</span></h2>
+                    <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+                    <p class="mb-6">En Dominick Pro, nos comprometemos a superar las expectativas de nuestros clientes
+                        mediante un servicio excepcional, transparencia absoluta e innovación constante en el sector
+                        inmobiliario.</p>
+
+                    <h3 class="text-xl font-semibold mb-3 gold-text">Nuestra Visión</h3>
+                    <p class="mb-6">Ser reconocidos como la inmobiliaria líder en nuestro mercado, distinguidos por
+                        nuestra integridad, conocimiento especializado y capacidad para crear soluciones inmobiliarias a
+                        medida.</p>
+
+                    <h3 class="text-xl font-semibold mb-3 gold-text">Nuestros Valores</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-circle-check gold-text mr-2"></i>
+                            <span>Integridad en todas nuestras transacciones</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-circle-check gold-text mr-2"></i>
+                            <span>Excelencia profesional en cada asesoría</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-circle-check gold-text mr-2"></i>
+                            <span>Innovación constante en nuestros servicios</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-circle-check gold-text mr-2"></i>
+                            <span>Compromiso con los resultados</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/500x350"
+                        alt="Equipo de Dominick Pro colaborando en proyecto inmobiliario" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+
+    <section id="servicios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Nuestros <span class="gold-text">Servicios</span></h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Soluciones integrales adaptadas a tus necesidades
+                    inmobiliarias</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 property-card">
+                    <div
+                        class="gold-bg text-blue-900 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Compra de Propiedades</h3>
+                    <p class="text-gray-600 text-center">Te ayudamos a encontrar la propiedad perfecta según tus
+                        necesidades y presupuesto, con acceso a las mejores opciones del mercado.</p>
+                    <div class="mt-6 text-center">
+                        <a href="#contacto" class="text-blue-600 font-semibold hover:text-blue-800">Más información
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 property-card">
+                    <div
+                        class="gold-bg text-blue-900 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-hand-holding-usd text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Vende tu Propiedad</h3>
+                    <p class="text-gray-600 text-center">Maximiza el valor de tu propiedad con nuestra estrategia de
+                        venta personalizada, marketing especializado y red de contactos.</p>
+                    <div class="mt-6 text-center">
+                        <a href="#contacto" class="text-blue-600 font-semibold hover:text-blue-800">Más información
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 property-card">
+                    <div
+                        class="gold-bg text-blue-900 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-key text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Alquila tu Propiedad</h3>
+                    <p class="text-gray-600 text-center">Administración profesional de propiedades en alquiler,
+                        incluyendo selección de inquilinos y gestión de contratos.</p>
+                    <div class="mt-6 text-center">
+                        <a href="#contacto" class="text-blue-600 font-semibold hover:text-blue-800">Más información
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 property-card">
+                    <div
+                        class="gold-bg text-blue-900 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Inversiones Inmobiliarias</h3>
+                    <p class="text-gray-600 text-center">Asesoramiento especializado para inversores, identificando
+                        oportunidades con el mejor potencial de rentabilidad.</p>
+                    <div class="mt-6 text-center">
+                        <a href="#contacto" class="text-blue-600 font-semibold hover:text-blue-800">Más información
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 property-card">
+                    <div
+                        class="gold-bg text-blue-900 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Desarrollo de Proyectos</h3>
+                    <p class="text-gray-600 text-center">Desde la concepción hasta la entrega, gestionamos proyectos
+                        inmobiliarios garantizando calidad y rentabilidad.</p>
+                    <div class="mt-6 text-center">
+                        <a href="#contacto" class="text-blue-600 font-semibold hover:text-blue-800">Más información
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 property-card">
+                    <div
+                        class="gold-bg text-blue-900 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Avalúos y Asesorías</h3>
+                    <p class="text-gray-600 text-center">Valuaciones profesionales y asesoramiento técnico para toma de
+                        decisiones informadas en bienes raíces.</p>
+                    <div class="mt-6 text-center">
+                        <a href="#contacto" class="text-blue-600 font-semibold hover:text-blue-800">Más información
+                            →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programa de Referidos -->
+
+    <section id="referidos" class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Programa de <span class="gold-text">Referidos</span></h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">Gana comisiones recomendando nuestros servicios a tus amigos y familiares
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <img src="https://placehold.co/500x350"
+                        alt="Personas celebrando con documentos de propiedad y llaves simbólicas"
+                        class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 gold-text">Beneficios para Referidores</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-4">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Comisión del 1%</h4>
+                                <p class="text-gray-200">Por cada venta generada a través de tu referencia.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-4">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Bonos Especiales</h4>
+                                <p class="text-gray-200">Premios adicionales al alcanzar metas de referidos.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="gold-bg text-blue-900 rounded-full p-2 mr-4">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Eventos Exclusivos</h4>
+                                <p class="text-gray-200">Acceso a eventos de networking y capacitación.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="bg-white text-blue-900 p-6 rounded-lg shadow-lg mb-8">
+                        <h4 class="font-bold mb-2">¿Cómo funciona?</h4>
+                        <ol class="space-y-3 pl-5 list-decimal">
+                            <li>Regístrate como referidor en nuestro programa</li>
+                            <li>Comparte tu enlace único con tus contactos</li>
+                            <li>Tus referidos mencionan tu nombre al contratar servicios</li>
+                            <li>Recibe tu comisión cuando se concrete la operación</li>
+                        </ol>
+                    </div>
+
+                    <button
+                        class="gold-bg text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300 w-full md:w-auto">Registrarme
+                        Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formas Vender/Alquilar -->
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Vende tu Propiedad -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="gold-bg text-blue-900 text-2xl w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-900">Vende tu Propiedad</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Nuestro proceso de venta está diseñado para maximizar el valor de tu
+                        propiedad minimizando el estrés y tiempos de espera.</p>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold mb-3 gold-text">Nuestro Proceso:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Avalúo profesional sin costo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Estrategia de marketing personalizada</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Presentación profesional de la propiedad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Red de compradores calificados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Gestión de toda la documentación</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 p-5 rounded-lg">
+                        <h4 class="font-semibold mb-2 gold-text">Beneficios Exclusivos:</h4>
+                        <p class="text-sm text-gray-600 mb-3">Al vender con Dominick Pro recibes:</p>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Fotografía profesional de tu propiedad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Tours virtuales 360°</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Publicación en 15 portales inmobiliarios</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto"
+                        class="block mt-6 gold-bg text-blue-900 font-semibold text-center py-3 rounded-lg hover:bg-yellow-600 transition duration-300">Quiero
+                        vender mi propiedad</a>
+                </div>
+
+                <!-- Alquila tu Propiedad -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="gold-bg text-blue-900 text-2xl w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-900">Alquila tu Propiedad</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Optimiza el rendimiento de tu propiedad con nuestro servicio de
+                        administración de alquileres profesional y confiable.</p>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold mb-3 gold-text">Nuestro Servicio Incluye:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Estudio de mercado para fijar precio óptimo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Selección cuidadosa de inquilinos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Contratos legalmente robustos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Cobro de rentas puntual</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-1 mr-3 mt-1">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <span>Gestión de mantenimientos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 p-5 rounded-lg">
+                        <h4 class="font-semibold mb-2 gold-text">Ventajas para Propietarios:</h4>
+                        <p class="text-sm text-gray-600 mb-3">Con nuestro servicio de alquiler:</p>
+                        <ul class="text-sm space-y-1">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Ocupación promedio del 95%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Protección del valor de tu propiedad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Sin dolores de cabeza con inquilinos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-xs gold-text mr-2 mt-1"></i>
+                                <span>Informes periódicos detallados</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto"
+                        class="block mt-6 gold-bg text-blue-900 font-semibold text-center py-3 rounded-lg hover:bg-yellow-600 transition duration-300">Quiero
+                        alquilar mi propiedad</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Testimonios</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Lo que nuestros clientes dicen sobre nosotros</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/80x80"
+                            alt="Retrato de Carlos Méndez, hombre profesional sonriente"
+                            class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Carlos Méndez</h4>
+                            <p class="text-sm text-gray-500">Vendió su apartamento</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                    </div>
+                    <p class="text-gray-600">"Dominick Pro logró vender mi apartamento en solo 2 semanas por encima del
+                        precio de mercado. Su equipo fue profesional, transparente y siempre disponibles para mis
+                        consultas."</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/80x80" alt="Retrato de Laura Sánchez, mujer ejecutiva elegante"
+                            class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Laura Sánchez</h4>
+                            <p class="text-sm text-gray-500">Compró una casa</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                    </div>
+                    <p class="text-gray-600">"Encontré mi casa soñada gracias al asesoramiento personalizado de Dominick
+                        Pro. Entendieron perfectamente lo que buscaba y me mostraron opciones que no había encontrado
+                        por mí misma."</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/80x80" alt="Retrato de Roberto Jiménez, hombre maduro con gafas"
+                            class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Roberto Jiménez</h4>
+                            <p class="text-sm text-gray-500">Administración de alquiler</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                        <i class="fas fa-star gold-text"></i>
+                    </div>
+                    <p class="text-gray-600">"Tengo tres propiedades en alquiler con Dominick Pro desde hace 5 años.
+                        Nunca he tenido un día de vacío y siempre recibo mis pagos puntualmente. Totalmente
+                        recomendado."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+
+    <section id="contacto" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Estamos aquí para ayudarte en tu proyecto inmobiliario</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-6 gold-text">Envíanos un Mensaje</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="nombre" class="block text-gray-700 mb-2">Nombre Completo</label>
+                                <input type="text" id="nombre"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Correo Electrónico</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="telefono" class="block text-gray-700 mb-2">Teléfono</label>
+                                <input type="tel" id="telefono"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="servicio" class="block text-gray-700 mb-2">Servicio de Interés</label>
+                                <select id="servicio"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="compra">Compra de propiedad</option>
+                                    <option value="venta">Venta de propiedad</option>
+                                    <option value="alquiler">Alquiler de propiedad</option>
+                                    <option value="inversion">Inversiones inmobiliarias</option>
+                                    <option value="otros">Otros servicios</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="mensaje" class="block text-gray-700 mb-2">Mensaje</label>
+                                <textarea id="mensaje" rows="4"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="gold-bg text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300 w-full">Enviar
+                                Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <div class="bg-blue-900 text-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-6 gold-text">Información de Contacto</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Oficina Principal</h4>
+                                    <p class="text-gray-300">Av. Principal 1234, Piso 12<br>Distrito Financiero, Ciudad
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Teléfonos</h4>
+                                    <p class="text-gray-300">+123 456 7890 (Oficina)<br>+123 987 6543 (WhatsApp)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Correo Electrónico</h4>
+                                    <p class="text-gray-300">info@dominickpro.com<br>ventas@dominickpro.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="gold-bg text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Horario de Atención</h4>
+                                    <p class="text-gray-300">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4 gold-text">Síguenos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-yellow-300 text-xl">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-300 text-xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-300 text-xl">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-300 text-xl">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+
+    <!-- <div class="h-96 w-full">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573812943!2d-73.98784492402538!3d40.7484409713889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTMuNiJX!5e0!3m2!1ses!2sus!4v1623867759828!5m2!1ses!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div> -->
+
+    <!-- Footer -->
+
+    <footer class="blue-bg text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-building text-2xl gold-text"></i>
+                        <a href="#" class="text-xl font-bold gold-text">DOMINICK <span class="text-white">PRO</span></a>
+                    </div>
+                    <p class="text-gray-300 text-sm">Más de una década liderando el mercado inmobiliario con
+                        profesionalismo e innovación.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 gold-text">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-300 hover:text-yellow-300 text-sm">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-gray-300 hover:text-yellow-300 text-sm">Quiénes Somos</a>
+                        </li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-yellow-300 text-sm">Servicios</a></li>
+                        <li><a href="#referidos" class="text-gray-300 hover:text-yellow-300 text-sm">Programa de
+                                Referidos</a></li>
+                        <li><a href="#contacto" class="text-gray-300 hover:text-yellow-300 text-sm">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 gold-text">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Compra de Propiedades</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Venta de Propiedades</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Alquileres</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Administración</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Avalúos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 gold-text">Contáctanos</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>908 942 105</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>contactanos@intercapitalperu.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Calle Juan del Carpio 195, San isidro</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm mb-4 md:mb-0">&copy; 2023 Dominick Pro. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Términos y Condiciones</a>
+                    <a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Política de Privacidad</a>
+                    <a href="#" class="text-gray-300 hover:text-yellow-300 text-sm">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/1234567890"
+            class="bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition duration-300 flex items-center justify-center">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Menu toggle for mobile
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    // Calculate position to scroll to
+                    const headerOffset = 90;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    // Smooth scroll
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+                this.reset();
+            });
+        }
+
+        // Referral program button
+        const referralBtn = document.querySelector('#referidos button');
+        if (referralBtn) {
+            referralBtn.addEventListener('click', function () {
+                alert('Serás redirigido al formulario de registro del programa de referidos.');
+            });
+        }
+    </script>
+</body>
+
+</html>
