@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-gradient {
+    background: #0d3153;
+}
+
+.bg-text {
+    color: #ffffff;
+}
+
+.hero-gradient {
+    background: #0d3153
+}
+
+.btn-transition {
+    transition: all 0.3s ease;
+}
+
+.btn-transition:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
