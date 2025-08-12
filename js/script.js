@@ -1,79 +1,121 @@
-// Menu toggle for mobile
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-});
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    // === Menú móvil ===
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            // Close mobile menu if open
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (!mobileMenu.classList.contains('hidden')) {
+    // === Scroll suave en enlaces con ancla ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || !document.querySelector(targetId)) return;
+
+            // Cierra el menú móvil si está abierto
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
             }
 
-            // Calculate position to scroll to
             const headerOffset = 90;
-            const elementPosition = targetElement.getBoundingClientRect().top;
+            const elementPosition = document.querySelector(targetId).getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            // Smooth scroll
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
-        }
+        });
     });
-});
 
-// Form submission handling
-const contactForm = document.querySelector('form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-        this.reset();
-    });
-}
+    // === Botón de referidos ===
+    const referralBtn = document.querySelector('#referidos button');
+    if (referralBtn) {
+        referralBtn.addEventListener('click', () => {
+            window.location.href = '#contacto';
+        });
+    }
 
-// Referral program button
-const referralBtn = document.querySelector('#referidos button');
-if (referralBtn) {
-    referralBtn.addEventListener('click', function () {
-        alert('Serás redirigido al formulario de registro del programa de referidos.');
-    });
-}
-
-(function () {
+    // === Reproductor de video (hero section) ===
     const v = document.getElementById('heroVideo');
     const btn = document.getElementById('playToggle');
     const iconPlay = document.getElementById('iconPlay');
     const iconPause = document.getElementById('iconPause');
 
-    function setIcons(isPlaying) {
-        iconPlay.classList.toggle('hidden', isPlaying);
-        iconPause.classList.toggle('hidden', !isPlaying);
+    if (v && btn && iconPlay && iconPause) {
+        function setIcons(isPlaying) {
+            iconPlay.classList.toggle('hidden', isPlaying);
+            iconPause.classList.toggle('hidden', !isPlaying);
+        }
+
+        btn.addEventListener('click', async () => {
+            if (v.paused) {
+                try { await v.play(); } catch (_) { }
+                setIcons(true);
+            } else {
+                v.pause();
+                setIcons(false);
+            }
+        });
+
+        // Autoplay silencioso al entrar en viewport
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    v.play().then(() => setIcons(true)).catch(() => { });
+                } else {
+                    v.pause();
+                    setIcons(false);
+                }
+            });
+        }, { threshold: 0.4 });
+
+        io.observe(v);
     }
 
-    btn.addEventListener('click', async () => {
-        if (v.paused) { try { await v.play(); } catch (_) { } setIcons(true); }
-        else { v.pause(); setIcons(false); }
-    });
+    // === Formulario + Getform + Toast ===
+    const contactForm = document.querySelector('form');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
 
-    // Autoplay silencioso al entrar en viewport
-    const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) { v.play().then(() => setIcons(true)).catch(() => { }); }
-            else { v.pause(); setIcons(false); }
+    if (contactForm && toast && toastMsg) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: this.method,
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            }).then(response => {
+                if (response.ok) {
+                    showToast("Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.");
+                    this.reset();
+                } else {
+                    showToast("Hubo un error al enviar tu mensaje. Intenta nuevamente.");
+                }
+            }).catch(error => {
+                showToast("Error de red. Por favor, intenta más tarde.");
+            });
         });
-    }, { threshold: 0.4 });
-    io.observe(v);
-})();
+
+        function showToast(message) {
+            toastMsg.textContent = message;
+            toast.classList.remove("hidden");
+            toast.classList.add("flex");
+
+            setTimeout(() => {
+                toast.classList.remove("flex");
+                toast.classList.add("hidden");
+            }, 5000);
+        }
+    }
+});
