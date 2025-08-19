@@ -22,7 +22,7 @@
                             alt="Logo Dominick Pro Inmobiliaria" class="w-36"></a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#inicio" class="bg-text hover:text-yellow-500 font-medium">Inicio</a>
+                    <a href="../index.html" class="bg-text hover:text-yellow-500 font-medium">Inicio</a>
                     <a href="#lotes" class="bg-text hover:text-yellow-500 font-medium">Lotes Disponibles</a>
                 </div>
                 <button class="md:hidden focus:outline-none">
@@ -69,7 +69,7 @@
                     <p class="text-gray-600">Años de experiencia</p>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-3xl font-bold text-yellow-500 mb-2">500+</h3>
+                    <h3 class="text-3xl font-bold text-yellow-500 mb-2">1600+</h3>
                     <p class="text-gray-600">Lotes vendidos</p>
                 </div>
                 <div class="p-6">
@@ -88,29 +88,29 @@
     <section id="lotes" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-sky-500 mb-4">Lotes Disponibles</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-yellow-500 mb-4">Lotes Disponibles</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">Descubre nuestras mejores opciones de inversión en
                     distintas regiones del país</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
                 <!-- Lote 1 -->
                 <div
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="relative">
-                        <img src="https://placehold.co/600x400"
+                        <img src="./img/praderas-s.png"
                             alt="Valle fértil con pequeñas colinas y vegetación abundante, ideal para desarrollo residencial"
                             class="w-full h-56 object-cover">
-                        <div class="absolute bottom-4 right-4 bg-white px-3 py-1 rounded-full shadow">
+                        <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full shadow">
                             <span class="text-sky-500 font-bold">5,000 m²</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-sky-600 mb-2">Valle Verde</h3>
+                        <h3 class="text-xl font-bold text-sky-600 mb-2">Padreras del Sol</h3>
                         <p class="text-gray-600 mb-4">Junín - 2hrs de Lima</p>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-emerald-500">$25,000</span>
-                            <span class="text-sm text-gray-500">Desde $50/m²</span>
+                            <span class="text-sm text-gray-500">Desde $65/m²</span>
                         </div>
                         <div class="mt-4 pt-4 border-t border-gray-200">
                             <ul class="grid grid-cols-2 gap-2">
@@ -147,7 +147,13 @@
                                     Seguridad
                                 </li>
                             </ul>
-                            <button
+
+                            <div class="hidden mt-4 text-sm text-gray-600" id="info-lote-1">
+                                <p><strong>Ubicación exacta:</strong> Sector Los Olivos, Valle Verde, Junín.</p>
+                                <p><strong>Documentación:</strong> Títulos saneados, HR y PU.</p>
+                                <p><strong>Uso:</strong> Ideal para casa de campo o desarrollo turístico.</p>
+                            </div>
+                            <button onclick="openModal('modal-lote-1')"
                                 class="mt-4 w-full bg-blue-400 hover:bg-sky-300 text-white font-medium py-2 px-4 rounded-lg transition">
                                 Más información
                             </button>
@@ -159,19 +165,20 @@
                 <div
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="relative">
-                        <img src="https://placehold.co/600x400"
+                        <img src="./img/riodeoro-s.png"
                             alt="Valle fértil con pequeñas colinas y vegetación abundante, ideal para desarrollo residencial"
                             class="w-full h-56 object-cover">
-                        <div class="absolute bottom-4 right-4 bg-white px-3 py-1 rounded-full shadow">
+                        <div class="absolute bottom-4 left-4 bg-white px-3 py-1 rounded-full shadow">
                             <span class="text-sky-500 font-bold">5,000 m²</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-sky-600 mb-2">Valle Verde</h3>
+                        <h3 class="text-xl font-bold text-sky-600 mb-2">Rio de Oro</h3>
                         <p class="text-gray-600 mb-4">Junín - 2hrs de Lima</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-emerald-500">$25,000</span>
-                            <span class="text-sm text-gray-500">Desde $50/m²</span>
+                            <span class="text-2xl font-bold text-emerald-500"> <span class="text-sm text-gray-500">Desde
+                                </span>$12,000</span>
+                            <span class="text-sm text-gray-500">$100/m²</span>
                         </div>
                         <div class="mt-4 pt-4 border-t border-gray-200">
                             <ul class="grid grid-cols-2 gap-2">
@@ -208,7 +215,7 @@
                                     Seguridad
                                 </li>
                             </ul>
-                            <button
+                            <button onclick="openModal('modal-lote-2')"
                                 class="mt-4 w-full bg-blue-400 hover:bg-sky-300 text-white font-medium py-2 px-4 rounded-lg transition">
                                 Más información
                             </button>
@@ -217,7 +224,7 @@
                 </div>
 
                 <!-- Lote 3 -->
-                <div
+                <!-- <div
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="relative">
                         <img src="https://placehold.co/600x400"
@@ -275,10 +282,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Lote 4 -->
-                <div
+                <!-- <div
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="relative">
                         <img src="https://placehold.co/600x400"
@@ -336,10 +343,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Lote 5 -->
-                <div
+                <!-- <div
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="relative">
                         <img src="https://placehold.co/600x400"
@@ -397,10 +404,10 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Lote 6 -->
-                <div
+                <!-- <div
                     class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div class="relative">
                         <img src="https://placehold.co/600x400"
@@ -458,7 +465,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -504,9 +511,87 @@
 
         <!-- Derechos Reservados centrados -->
         <div class="text-center mt-8">
-            <p class="text-sm">&copy; 2025 Tierras Valiosas. Todos los derechos reservados.</p>
+            <p class="text-sm">&copy; 2025 Dominick Pro. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- MODAL 1  -->
+    <div id="modal-lote-1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white max-w-3xl w-full rounded-lg shadow-lg overflow-auto max-h-[90vh]">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-sky-600">Detalles del Lote - Valle Verde</h2>
+                    <button onclick="closeModal('modal-lote-1')"
+                        class="text-gray-500 hover:text-gray-800 text-xl">&times;</button>
+                </div>
+                <div class="relative w-full h-64 overflow-hidden rounded-md mb-6">
+                    <div id="carousel-lote-1" class="flex transition-transform duration-500 ease-in-out w-full h-full">
+                        <img src="./img/rio-4.jpg" class="w-full flex-shrink-0 object-cover" />
+                        <img src="./img/rio-1.jpg" class="w-full flex-shrink-0 object-cover" />
+                        <img src="./img/rio-2.jpg" class="w-full flex-shrink-0 object-cover" />
+                        <img src="./img/rio-3.jpg" class="w-full flex-shrink-0 object-cover" />
+                    </div>
+
+                    <!-- Flechas de navegación -->
+                    <button onclick="prevSlide('carousel-lote-1')"
+                        class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow">
+                        &#10094;
+                    </button>
+                    <button onclick="nextSlide('carousel-lote-1')"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow">
+                        &#10095;
+                    </button>
+                </div>
+                <div class="mt-4 text-sm text-gray-700 space-y-2">
+                    <p><strong>Ubicación:</strong> Huaral, a solo 2 horas de Lima.</p>
+                    <p><strong>Área:</strong> 5,000 m²</p>
+                    <p><strong>Precio:</strong> $25,000 (desde $50/m²)</p>
+                    <p><strong>Servicios:</strong> Agua, luz, acceso vehicular y seguridad.</p>
+                    <p><strong>Ideal para:</strong> Casa de campo, desarrollo turístico o inversión.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL 2  -->
+    <div id="modal-lote-2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white max-w-3xl w-full rounded-lg shadow-lg overflow-auto max-h-[90vh]">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-sky-600">Detalles del Lote - Valle Verde</h2>
+                    <button onclick="closeModal('modal-lote-2')"
+                        class="text-gray-500 hover:text-gray-800 text-xl">&times;</button>
+                </div>
+                <div class="relative w-full h-64 overflow-hidden rounded-md mb-6">
+                    <div id="carousel-lote-2" class="flex transition-transform duration-500 ease-in-out w-full h-full">
+                        <img src="./img/rio-4.jpg" class="w-full flex-shrink-0 object-contain" />
+                        <img src="./img/rio-1.jpg" class="w-full flex-shrink-0 object-contain" />
+                        <img src="./img/rio-2.jpg" class="w-full flex-shrink-0 object-contain" />
+                        <img src="./img/rio-3.jpg" class="w-full flex-shrink-0 object-contain" />
+                    </div>
+
+                    <!-- Flechas de navegación -->
+                    <button onclick="prevSlide('carousel-lote-2')"
+                        class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow">
+                        &#10094;
+                    </button>
+                    <button onclick="nextSlide('carousel-lote-2')"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center shadow">
+                        &#10095;
+                    </button>
+                </div>
+                <div class="mt-4 text-sm text-gray-700 space-y-2">
+                    <p><strong>Ubicación:</strong> Junín, a solo 2 horas de Lima.</p>
+                    <p><strong>Área:</strong> 5,000 m²</p>
+                    <p><strong>Precio:</strong> $25,000 (desde $50/m²)</p>
+                    <p><strong>Servicios:</strong> Agua, luz, acceso vehicular y seguridad.</p>
+                    <p><strong>Ideal para:</strong> Casa de campo, desarrollo turístico o inversión.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/lote.js"></script>
+
 </body>
+
 
 </html>
