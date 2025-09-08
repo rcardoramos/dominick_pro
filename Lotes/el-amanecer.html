@@ -76,7 +76,7 @@
                     Invierte en un lote campestre, donde la tranquilidad y el potencial de crecimiento se unen para
                     crear el futuro que siempre soñaste.
                 </p>
-                <p class="opacity-80">Tour virtual + info directa a tu WhatsApp 📲</p>
+                <p class="opacity-80">Tour presencial gratuito + info directo a tu WhatsApp 📲</p>
             </div>
 
             <!-- Formulario (card) -->
@@ -266,30 +266,6 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-blue-900 to-indigo-700 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12 drop-shadow-lg leading-tight">¿Listo para Invertir en tu Futuro?</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
-                Déjanos tus datos y un asesor se pondrá en contacto contigo para brindarte toda la información que
-                necesitas.
-            </p>
-            <form action="#" method="POST" class="max-w-xl mx-auto bg-white p-10 rounded-xl shadow-2xl space-y-6">
-                <div>
-                    <input type="text" id="nombre-form" name="nombre" placeholder="Tu Nombre Completo" required
-                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-800 text-lg shadow-sm">
-                </div>
-                <div>
-                    <input type="tel" id="telefono-form" name="telefono" placeholder="Tu Número de Celular" required
-                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-800 text-lg shadow-sm">
-                </div>
-                <button type="submit"
-                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                    Enviar Información
-                </button>
-            </form>
-        </div>
-    </section>
-
     <footer class="bg-gray-800 text-white py-10 text-center">
         <div class="container mx-auto px-6">
             <p>&copy; 2025 Dominick Pro Inmobiliaria / El Amanacer. Todos los derechos reservados.</p>
@@ -312,34 +288,44 @@
         (function () {
             const form = document.getElementById('lead-form');
             const statusEl = document.getElementById('form-status');
+            const submitBtn = form.querySelector('button[type="submit"]');
 
-            // TODO: pega tu endpoint real (el mismo que en el hidden si usas Getform)
             const ENDPOINT = "https://getform.io/f/TU-ENDPOINT-REAL";
-            // TODO: URL a donde redirigir tras enviar (puede ser tu otra web)
-            const REDIRECT_URL = "./gracias-tour-amanecer.html";
+            const REDIRECT_URL = "https://tusitio.com/gracias-tour-amanecer.html";
 
-            form.addEventListener('submit', async (e) => {
+            form.addEventListener('submit', (e) => {
                 e.preventDefault();
-                statusEl.textContent = "Enviando…";
+
+                // UI: bloqueo + loader
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
+                submitBtn.innerText = 'Enviando…';
+                statusEl.textContent = 'Procesando tu registro...';
 
                 const fd = new FormData(form);
-                // Si usaste el hidden __endpoint, priorízalo:
                 const customEndpoint = fd.get('__endpoint') || ENDPOINT;
                 fd.delete('__endpoint');
 
+                // 1) Disparo sin esperar (fire-and-forget)
                 try {
-                    const res = await fetch(customEndpoint, { method: 'POST', body: fd });
-                    // Considera a 200–299 como éxito aunque el provider devuelva 302
-                    if (res.ok || res.status === 302) {
-                        window.location.href = REDIRECT_URL;
-                    } else {
-                        statusEl.textContent = "Hubo un problema al enviar. Intenta de nuevo.";
-                    }
+                    fetch(customEndpoint, {
+                        method: 'POST',
+                        body: fd,
+                        keepalive: true // <- clave para no abortar al navegar
+                    });
                 } catch (err) {
-                    statusEl.textContent = "Sin conexión. Reintenta en un momento.";
+                    // Si falla, igual seguimos con la UX rápida (ver timeout abajo)
                 }
+
+                // 2) Redirección inmediata (UX rápida)
+                const go = () => window.location.replace(REDIRECT_URL);
+
+                // 3) En la mayoría de casos, redirige YA:
+                //    Si quieres darle 300–600ms para que alcance a salir el request, usa setTimeout:
+                setTimeout(go, 400);
             });
         })();
+    </script>
     </script>
 </body>
 
