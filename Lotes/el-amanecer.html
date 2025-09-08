@@ -60,25 +60,54 @@
             class="h-14 transform hover:scale-105 transition duration-300 ease-in-out">
     </header>
 
-    <section id="hero"
-        class=" relative h-screen flex items-center justify-center text-center text-white overflow-hidden pt-24 md:pt-0">
+    <section id="hero" class="relative min-h-screen flex items-center pt-24 md:pt-0 text-white overflow-hidden">
+        <!-- Fondo -->
         <img src="./img/hero-elamanecer.webp" alt="Fondo de Lotes en Huaral - El Amanecer"
             class="absolute inset-0 w-full h-full object-cover z-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-        <div class="relative z-10 p-6 max-w-4xl mx-auto">
-            <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
-                Construye Tu Legado en la Naturaleza
-            </h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md">
-                Invierte en un lote campestre, donde la tranquilidad y el potencial de crecimiento se unen para crear el
-                futuro que siempre soñaste.
-            </p>
-            <a href="https://chat.whatsapp.com/HoMJCAA4zh09k29UVaclDR" target="_blank"
-                class="whatsapp-button inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition duration-300 ease-in-out">
-                ¡ÚNETE AL GRUPO DE WHATSAPP PARA VER EL TOUR VIRTUAL! <i class="fab fa-whatsapp ml-3 text-2xl"></i>
-            </a>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+
+        <div class="relative z-10 container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+            <!-- Texto -->
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                    Construye Tu Legado en la Naturaleza
+                </h1>
+                <p class="text-lg md:text-xl mb-6 max-w-2xl drop-shadow-md">
+                    Invierte en un lote campestre, donde la tranquilidad y el potencial de crecimiento se unen para
+                    crear el futuro que siempre soñaste.
+                </p>
+                <p class="opacity-80">Tour virtual + info directa a tu WhatsApp 📲</p>
+            </div>
+
+            <!-- Formulario (card) -->
+            <div class="bg-white/95 text-gray-800 rounded-2xl shadow-2xl p-6 md:p-8 backdrop-blur">
+                <h3 class="text-2xl font-bold mb-4 text-white">Regístrate y recibe el tour</h3>
+                <form id="lead-form" class="space-y-4">
+                    <!-- TODO: pega tu endpoint real (Getform, Formspree, Apps Script) -->
+                    <input type="hidden" name="__endpoint" value="https://getform.io/f/TU-ENDPOINT-REAL">
+
+                    <div>
+                        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre completo"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+
+                    <div>
+                        <input id="telefono" name="telefono" type="tel" required placeholder="Tu número de celular"
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg text-lg transition transform hover:scale-[1.02]">
+                        Enviar y ver tour virtual
+                    </button>
+
+                    <p id="form-status" class="text-sm text-gray-600 mt-2"></p>
+                </form>
+            </div>
         </div>
     </section>
+
 
     <section id="why-invest" class="py-20 py-20 text-white" style="background-color: #0d3153">
         <div class="container mx-auto px-6 text-center">
@@ -279,6 +308,38 @@
             alert(`Gracias, ${nombre}! Nos pondremos en contacto contigo al ${telefono} muy pronto.`);
             this.reset();
         });
+
+        (function () {
+            const form = document.getElementById('lead-form');
+            const statusEl = document.getElementById('form-status');
+
+            // TODO: pega tu endpoint real (el mismo que en el hidden si usas Getform)
+            const ENDPOINT = "https://getform.io/f/TU-ENDPOINT-REAL";
+            // TODO: URL a donde redirigir tras enviar (puede ser tu otra web)
+            const REDIRECT_URL = "./gracias-tour-amanecer.html";
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                statusEl.textContent = "Enviando…";
+
+                const fd = new FormData(form);
+                // Si usaste el hidden __endpoint, priorízalo:
+                const customEndpoint = fd.get('__endpoint') || ENDPOINT;
+                fd.delete('__endpoint');
+
+                try {
+                    const res = await fetch(customEndpoint, { method: 'POST', body: fd });
+                    // Considera a 200–299 como éxito aunque el provider devuelva 302
+                    if (res.ok || res.status === 302) {
+                        window.location.href = REDIRECT_URL;
+                    } else {
+                        statusEl.textContent = "Hubo un problema al enviar. Intenta de nuevo.";
+                    }
+                } catch (err) {
+                    statusEl.textContent = "Sin conexión. Reintenta en un momento.";
+                }
+            });
+        })();
     </script>
 </body>
 

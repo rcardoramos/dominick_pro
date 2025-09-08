@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Gracias! | El Amanecer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/LOGO-DPI-1080.png" type="image/x-icon">
+    <style>
+        @keyframes pulse-scale {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .animate-pulse-scale {
+            animation: pulse-scale 1.5s infinite ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-6 text-white relative">
+
+    <header class="w-full fixed top-0 left-0 z-50 bg-white/90 ">
+        <div class="container mx-auto flex justify-center py-4">
+            <a href="index.html">
+                <img src="./img/LOGO_AMANECER.png" alt="Logo El Amanecer"
+                    class="h-16 md:h-20 transform hover:scale-105 transition duration-300 ease-in-out">
+            </a>
+        </div>
+    </header>
+
+    <!-- Fondo con imagen -->
+    <img src="./img/hero-elamanecer.webp" alt="Fondo El Amanecer"
+        class="absolute inset-0 w-full h-full object-cover z-0">
+
+    <!-- Capa oscura para mejor contraste -->
+    <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+    <!-- Contenido -->
+    <div class="relative z-10  backdrop-blur-md rounded-2xl p-10 max-w-lg text-center">
+        <h1 class="text-6xl md:text-8xl font-extrabold text-white text-center drop-shadow-lg  mx-auto ">Felicidades por
+            registrarte!🎉</h1>
+        <p class="opacity-90 mb-8 mt-12 bg-green-300 rounded-full ">Dale clic en el botón para unirte al <strong>grupo
+                de
+                WhatsApp</strong>
+            ydonde se
+            enviará toda la información de la presentación zoom.</p>
+
+        <a href="https://chat.whatsapp.com/HoMJCAA4zh09k29UVaclDR" target="_blank"
+            class="inline-flex items-center justify-center bg-green-700 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg transition animate-pulse-scale">
+            Unirme al grupo de WhatsApp
+        </a>
+
+    </div>
+</body>
+
+</html>
