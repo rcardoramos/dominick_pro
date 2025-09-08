@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotes El Amanecer | Invierte en tu Futuro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../img/LOGO-DPI-1080.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .whatsapp-button {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+        }
+
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="flex flex-col md:flex-row justify-between items-center px-6 py-4  shadow-lg fixed w-full z-50">
+        <img src="./img/LOGO-DPI-1080-AL-LIMITE.png" alt="Logo de la Inmobiliaria"
+            class="h-14 mb-4 md:mb-0 transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="./img/LOGO_AMANECER.png" alt="Logo de los Lotes"
+            class="h-14 transform hover:scale-105 transition duration-300 ease-in-out">
+    </header>
+
+    <section id="hero"
+        class=" relative h-screen flex items-center justify-center text-center text-white overflow-hidden pt-24 md:pt-0">
+        <img src="./img/hero-elamanecer.webp" alt="Fondo de Lotes en Huaral - El Amanecer"
+            class="absolute inset-0 w-full h-full object-cover z-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+        <div class="relative z-10 p-6 max-w-4xl mx-auto">
+            <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                Construye Tu Legado en la Naturaleza
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Invierte en un lote campestre, donde la tranquilidad y el potencial de crecimiento se unen para crear el
+                futuro que siempre soñaste.
+            </p>
+            <a href="https://chat.whatsapp.com/HoMJCAA4zh09k29UVaclDR" target="_blank"
+                class="whatsapp-button inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transition duration-300 ease-in-out">
+                ¡ÚNETE AL GRUPO DE WHATSAPP PARA VER EL TOUR VIRTUAL! <i class="fab fa-whatsapp ml-3 text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="why-invest" class="py-20 py-20 text-white" style="background-color: #0d3153">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-white leading-tight">¿Por qué Elegir un Lote Campestre?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div
+                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-mountain text-blue-500 text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Naturaleza y Bienestar</h3>
+                    <p class="text-gray-700 leading-relaxed">Escapa del bullicio urbano y reconecta con la serenidad de
+                        la naturaleza, mejorando tu calidad de vida.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-chart-line text-green-500 text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Inversión Inteligente</h3>
+                    <p class="text-gray-700 leading-relaxed">Una oportunidad única para asegurar tu patrimonio con una
+                        alta plusvalía en un mercado en crecimiento.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-home text-5xl mb-6" style="color: #8B4513;"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Diseña a tu Gusto</h3>
+                    <p class="text-gray-700 leading-relaxed">Total libertad para construir la casa de tus sueños,
+                        adaptada a tus necesidades y estilo de vida.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-users text-purple-500 text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Comunidad Exclusiva</h3>
+                    <p class="text-gray-700 leading-relaxed">Forma parte de una comunidad que valora la tranquilidad, el
+                        respeto por la naturaleza y la calidad de vida.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-sun text-yellow-600 text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Espacios al Aire Libre</h3>
+                    <p class="text-gray-700 leading-relaxed">Disfruta de amplios espacios para actividades al aire
+                        libre, deporte, relajación y momentos inolvidables.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <i class="fas fa-shield-alt text-red-500 text-5xl mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Seguridad y Privacidad</h3>
+                    <p class="text-gray-700 leading-relaxed">Vive con la tranquilidad de un entorno seguro y privado,
+                        ideal para tu familia y tus proyectos.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#hero"
+                    class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    ¡Quiero registrarme al zoom!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-20 " style="background-color: #0d3153">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-white leading-tight">Explora Nuestros Lotes Exclusivos</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                <div
+                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+1" alt="Lote Campestre 1"
+                        class="w-full h-auto object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Lote #1 - 1,500 m²</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+2" alt="Lote Campestre 2"
+                        class="w-full h-auto object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Lote #2 - 2,000 m²</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+3" alt="Lote Campestre 3"
+                        class="w-full h-auto object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Lote #3 - 1,800 m²</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+4" alt="Lote Campestre 4"
+                        class="w-full h-auto object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Lote #4 - 2,500 m²</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+5" alt="Lote Campestre 5"
+                        class="w-full h-auto object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Lote #5 - 1,900 m²</p>
+                    </div>
+                </div>
+
+                <div
+                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+6" alt="Lote Campestre 6"
+                        class="w-full h-auto object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-semibold">Lote #6 - 3,000 m²</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20" style="background-color: #0d3153">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-white leading-tight">Lo que Nuestros Clientes Dicen</h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div
+                    class="p-8 bg-blue-50 rounded-xl shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <p class="text-gray-700 italic text-lg mb-6 leading-relaxed">
+                        "Encontrar nuestro lote campestre fue un sueño hecho realidad. La tranquilidad, la naturaleza y
+                        la excelente atención superaron nuestras expectativas. ¡Estamos encantados!"
+                    </p>
+                    <div class="flex items-center justify-center">
+                        <img src="https://via.placeholder.com/60x60?text=Persona+1" alt="Testimonio de Juan Pérez"
+                            class="w-16 h-16 rounded-full mr-4 border-2 border-blue-400">
+                        <p class="font-semibold text-gray-900 text-lg">- Juan Pérez, Inversionista Feliz</p>
+                    </div>
+                </div>
+                <div
+                    class="p-8 bg-green-50 rounded-xl shadow-lg border-l-4 border-green-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    <p class="text-gray-700 italic text-lg mb-6 leading-relaxed">
+                        "Desde el primer contacto hasta la firma, todo fue transparente y profesional. Ahora estamos
+                        construyendo la casa de nuestros sueños en un lugar paradisíaco. ¡Recomendado 100%!"
+                    </p>
+                    <div class="flex items-center justify-center">
+                        <img src="https://via.placeholder.com/60x60?text=Persona+2" alt="Testimonio de Ana Gómez"
+                            class="w-16 h-16 rounded-full mr-4 border-2 border-green-400">
+                        <p class="font-semibold text-gray-900 text-lg">- Ana Gómez, Nueva Propietaria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-blue-900 to-indigo-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12 drop-shadow-lg leading-tight">¿Listo para Invertir en tu Futuro?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                Déjanos tus datos y un asesor se pondrá en contacto contigo para brindarte toda la información que
+                necesitas.
+            </p>
+            <form action="#" method="POST" class="max-w-xl mx-auto bg-white p-10 rounded-xl shadow-2xl space-y-6">
+                <div>
+                    <input type="text" id="nombre-form" name="nombre" placeholder="Tu Nombre Completo" required
+                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-800 text-lg shadow-sm">
+                </div>
+                <div>
+                    <input type="tel" id="telefono-form" name="telefono" placeholder="Tu Número de Celular" required
+                        class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-800 text-lg shadow-sm">
+                </div>
+                <button type="submit"
+                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                    Enviar Información
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Dominick Pro Inmobiliaria / El Amanacer. Todos los derechos reservados.</p>
+            <p class="mt-2 text-xs">Hecho con 💙 por <a href="https://www.minddevperu.com/" target="_blank"
+                    class="text-blue-500 hover:text-red-200">Minddev</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('#contact form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre-form').value;
+            const telefono = document.getElementById('telefono-form').value;
+
+            alert(`Gracias, ${nombre}! Nos pondremos en contacto contigo al ${telefono} muy pronto.`);
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

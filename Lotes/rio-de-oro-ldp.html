@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior:smooth;">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tu Lote en el Campo — Dominick Pro Inmobiliaria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../img/LOGO-DPI-1080.png" type="image/x-icon">
+    <style>
+        :root {
+            --green-900: #0f3d2e;
+            --green-700: #165a42;
+            --red-500: #ec3333;
+            --green-300: #86efac;
+            --cream: #f3f8f5;
+            --gold: #facc15;
+
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: #1f2937;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--green-900);
+        }
+
+        .btn-primary:hover {
+            background: #f8fafc;
+        }
+
+        .btn-cta {
+            background: var(--red-500);
+            color: #fafafa;
+        }
+
+        .btn-cta:hover {
+            filter: brightness(0.95);
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .25);
+        }
+
+        .form-input {
+            transition: all .2s ease;
+            color: #0f172a;
+            background: #fff;
+            caret-color: var(--green-900);
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER (logo centrado como en tus landings) -->
+    <!-- <header class="bg-[color:var(--green-900)]">
+        <div class="w-full flex justify-center py-4">
+            <a href="https://dominickpro.com/" target="_blank" rel="noopener">
+                <img src="../img/LOGO-DPI-1080-AL-LIMITE.png" alt="Dominick Pro" class="h-12 md:h-20">
+            </a>
+        </div>
+    </header> -->
+
+    <!-- HERO con foto de fondo + overlay -->
+    <section id="inicio" class="relative min-h-[80vh] flex items-center bg-[color:var(--green-900)]">
+        <div class="relative z-10 container mx-auto px-6 py-16 text-white max-w-4xl text-center">
+
+            <!-- Título -->
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                Tu lote en el <span class="text-[color:var(--green-300)]">campo</span>, tu próximo patrimonio
+            </h1>
+
+            <!-- Imagen debajo del título -->
+            <div class="mt-8 flex py-10 justify-center">
+                <img src="./img/casa-de-campo-ldp.png" alt="Vista de lotes en el campo"
+                    class="rounded-lg shadow-2xl object-cover">
+            </div>
+
+            <h2 class="text-2xl py-2 md:text-3xl font-bold mb-2 uppercase">
+                ¡Regístrate a nuestro próximo Zoom!
+            </h2>
+            <p class="text-lg font-medium mb-6">Completa este formulario</p>
+
+            <!-- Formulario -->
+            <div id="formulario" class="mt-10">
+                <form action="https://getform.io/f/tu-endpoint-aqui" method="POST" class="space-y-4">
+                    <input type="text" name="nombre" placeholder="Nombres Completos" required
+                        class="w-full px-4 py-3 rounded-md border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <input type="tel" name="whatsapp" placeholder="WhatsApp" required
+                        class="w-full px-4 py-3 rounded-md border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-md shadow-md transition uppercase tracking-wide">
+                        ¡Regístrate ahora!
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- DESTACADOS / BENEFICIOS -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[color:var(--green-900)]">¿Por qué invertir en un lote de
+                    Rio de Oro?.
+                </h2>
+                <p class="mt-3 text-gray-600 max-w-3xl mx-auto">
+                    Un plan pensado para empezar hoy: ubicación estratégica, precios accesibles y respaldo profesional.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="rounded-xl bg-[color:var(--cream)] p-6 border border-[color:var(--green-900)]/10 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-[color:var(--green-300)] grid place-items-center mb-4">
+                        <!-- ubicación -->
+                        <svg class="w-6 h-6 text-[color:var(--green-900)]" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-[color:var(--green-900)]">Ubicación Clave</h3>
+                    <p class="mt-2 text-gray-600">Accesos cercanos, servicios y crecimiento urbano proyectado.</p>
+                </div>
+
+                <div
+                    class="rounded-xl bg-[color:var(--cream)] p-6 border border-[color:var(--green-900)]/10 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-[color:var(--green-300)] grid place-items-center mb-4">
+                        <!-- contrato -->
+                        <svg class="w-6 h-6 text-[color:var(--green-900)]" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 13h8v2H8zm0 4h8v2H8zm6-8h-4V7h4z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-[color:var(--green-900)]">Documentación OK</h3>
+                    <p class="mt-2 text-gray-600">Contratos claros y trazabilidad legal.</p>
+                </div>
+
+                <div
+                    class="rounded-xl bg-[color:var(--cream)] p-6 border border-[color:var(--green-900)]/10 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-[color:var(--green-300)] grid place-items-center mb-4">
+                        <!-- dinero -->
+                        <svg class="w-6 h-6 text-[color:var(--green-900)]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 6h18v12H3zM6 9h4v6H6zM12 9h6v6h-6z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-[color:var(--green-900)]">Cuotas Flexibles</h3>
+                    <p class="mt-2 text-gray-600">Financiamiento directo y opciones a tu medida.</p>
+                </div>
+
+                <div
+                    class="rounded-xl bg-[color:var(--cream)] p-6 border border-[color:var(--green-900)]/10 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-[color:var(--green-300)] grid place-items-center mb-4">
+                        <!-- hoja -->
+                        <svg class="w-6 h-6 text-[color:var(--green-900)]" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M5 3a7 7 0 0 1 7 7v11H7a4 4 0 0 1-4-4V3zM19 3h-5a7 7 0 0 0-7 7v11h8a4 4 0 0 0 4-4V3z" />
+                    </div>
+                    <h3 class="font-semibold text-lg text-[color:var(--green-900)]">Naturaleza</h3>
+                    <p class="mt-2 text-gray-600">Vive rodeado de áreas verdes y aire puro, ideal para tu familia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="py-16 bg-[color:var(--cream)]">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-5xl font-bold text-center text-[color:var(--green-900)] mb-12">¡Ellos ya son parte de
+                nuestra familia!</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <img src="/assets/img/lote1.jpg" alt="Vista aérea"
+                    class="rounded-xl shadow-lg hover:scale-[1.02] transition">
+                <img src="/assets/img/lote2.jpg" alt="Áreas verdes"
+                    class="rounded-xl shadow-lg hover:scale-[1.02] transition">
+                <img src="/assets/img/lote3.jpg" alt="Camino de acceso"
+                    class="rounded-xl shadow-lg hover:scale-[1.02] transition">
+                <img src="/assets/img/lote2.jpg" alt="Áreas verdes"
+                    class="rounded-xl shadow-lg hover:scale-[1.02] transition">
+                <img src="/assets/img/lote3.jpg" alt="Camino de acceso"
+                    class="rounded-xl shadow-lg hover:scale-[1.02] transition">
+            </div>
+            <div class="flex justify-center mt-8">
+                <a href="#formulario"
+                    class="btn-cta inline-block font-semibold px-8 py-4 rounded-lg shadow-lg transition">
+                    Cotiza tu lote ahora
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CTA con fondo -->
+    <section class="relative py-20">
+        <img src="/assets/img/lote-fondo.jpg" alt="Paisaje natural" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-[color:var(--green-900)]/70">
+            <div class="relative container mx-auto px-6 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Testimonios</h2>
+                <a href="#formulario"
+                    class="btn-cta inline-block font-semibold px-8 py-4 rounded-lg shadow-lg transition">
+                    ¡Registrate en nuestro próxima transmisión de Zoom!
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- TOAST -->
+    <!-- <div id="toast"
+        class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 max-w-sm rounded-lg bg-white text-[color:var(--green-900)] shadow-xl px-4 py-3 border border-[color:var(--green-900)]/20"
+        role="alert">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-green-600" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2m-1 15-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9z" />
+        </svg>
+        <span id="toastMsg" class="text-sm font-medium">¡Gracias por tu interés!</span>
+    </div> -->
+
+    <!-- FOOTER -->
+    <footer class="bg-[color:var(--green-900)] text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div><img src="/assets/img/DPI-EMPRESA-PNG.png" alt="Dominick Pro" class="h-10 md:h-12"></div>
+            <div class="text-center md:text-right">
+                <div class="flex justify-center md:justify-end gap-4 mt-2">
+                    <a href="#" aria-label="Facebook" class="text-white/70 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-white/70 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-white/70 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6">
+            <p class="text-center text-xs text-white/70">
+                Desarrollado con ❤️ por
+                <a href="https://minddevperu.com/" target="_blank"
+                    class="underline hover:text-white transition">Minddev</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT TOAST -->
+    <script>
+        (function () {
+            const form = document.getElementById('registroForm');
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+
+            function showToast(message = '¡Gracias por tu interés!', ms = 3500) {
+                toastMsg.textContent = message;
+                toast.classList.remove('hidden');
+                toast.classList.add('flex');
+                setTimeout(() => { toast.classList.add('hidden'); toast.classList.remove('flex'); }, ms);
+            }
+
+            form.addEventListener('submit', async e => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                try {
+                    const res = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+                    if (res.ok) { form.reset(); showToast('¡Gracias! Te contactaremos pronto.'); }
+                    else { showToast('Error en el envío, intenta de nuevo', 4000); }
+                } catch { showToast('Sin conexión, inténtalo más tarde', 4000); }
+            });
+        })();
+    </script>
+</body>
+
+</html>
