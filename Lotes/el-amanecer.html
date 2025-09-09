@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" href="../img/LOGO-DPI-1080.png" type="image/x-icon">
+    <link rel="preconnect" href="https://getform.io" crossorigin>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -48,6 +49,37 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .aspect-9-16 {
+            position: relative;
+            width: 100%;
+            padding-top: 177.78%;
+        }
+
+        .aspect-9-16>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        @keyframes pulse-scale {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        .animate-pulse-scale {
+            animation: pulse-scale 1.6s infinite ease-in-out;
+        }
+    </style>
     </style>
 </head>
 
@@ -61,7 +93,7 @@
     </header>
 
     <section id="hero" class="relative min-h-screen flex items-center pt-24 md:pt-0 text-white overflow-hidden">
-        <!-- Fondo -->
+
         <img src="./img/hero-elamanecer.webp" alt="Fondo de Lotes en Huaral - El Amanecer"
             class="absolute inset-0 w-full h-full object-cover z-0">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
@@ -76,21 +108,20 @@
                     Invierte en un lote campestre, donde la tranquilidad y el potencial de crecimiento se unen para
                     crear el futuro que siempre soñaste.
                 </p>
-                <p class="opacity-80">Tour presencial gratuito + info directo a tu WhatsApp 📲</p>
+                <p class="opacity-80">Tour presencial + info directo a tu WhatsApp 📲</p>
             </div>
 
-            <!-- Formulario (card) -->
+
             <div class="bg-white/95 text-gray-800 rounded-2xl shadow-2xl p-6 md:p-8 backdrop-blur">
                 <h3 class="text-2xl font-bold mb-4 text-white">Regístrate y recibe el tour</h3>
                 <form id="lead-form" class="space-y-4">
-                    <!-- TODO: pega tu endpoint real (Getform, Formspree, Apps Script) -->
-                    <input type="hidden" name="__endpoint" value="https://getform.io/f/TU-ENDPOINT-REAL">
+
+                    <input type="hidden" name="__endpoint" value="https://getform.io/f/aejevogb">
 
                     <div>
                         <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre completo"
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                     </div>
-
 
                     <div>
                         <input id="telefono" name="telefono" type="tel" required placeholder="Tu número de celular"
@@ -109,162 +140,255 @@
     </section>
 
 
-    <section id="why-invest" class="py-20 py-20 text-white" style="background-color: #0d3153">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12 text-white leading-tight">¿Por qué Elegir un Lote Campestre?</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div
-                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-mountain text-blue-500 text-5xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Naturaleza y Bienestar</h3>
-                    <p class="text-gray-700 leading-relaxed">Escapa del bullicio urbano y reconecta con la serenidad de
-                        la naturaleza, mejorando tu calidad de vida.</p>
-                </div>
-                <div
-                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-chart-line text-green-500 text-5xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Inversión Inteligente</h3>
-                    <p class="text-gray-700 leading-relaxed">Una oportunidad única para asegurar tu patrimonio con una
-                        alta plusvalía en un mercado en crecimiento.</p>
-                </div>
-                <div
-                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-home text-5xl mb-6" style="color: #8B4513;"></i>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Diseña a tu Gusto</h3>
-                    <p class="text-gray-700 leading-relaxed">Total libertad para construir la casa de tus sueños,
-                        adaptada a tus necesidades y estilo de vida.</p>
-                </div>
-                <div
-                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-users text-purple-500 text-5xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Comunidad Exclusiva</h3>
-                    <p class="text-gray-700 leading-relaxed">Forma parte de una comunidad que valora la tranquilidad, el
-                        respeto por la naturaleza y la calidad de vida.</p>
-                </div>
-                <div
-                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-sun text-yellow-600 text-5xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Espacios al Aire Libre</h3>
-                    <p class="text-gray-700 leading-relaxed">Disfruta de amplios espacios para actividades al aire
-                        libre, deporte, relajación y momentos inolvidables.</p>
-                </div>
-                <div
-                    class="p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-                    <i class="fas fa-shield-alt text-red-500 text-5xl mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Seguridad y Privacidad</h3>
-                    <p class="text-gray-700 leading-relaxed">Vive con la tranquilidad de un entorno seguro y privado,
-                        ideal para tu familia y tus proyectos.</p>
-                </div>
+    <section id="why-invest" class="py-20 text-white" style="background-color:#0d3153">
+        <div class="container mx-auto px-6">
+            <!-- Eyebrow + Título -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="inline-block text-xs uppercase tracking-widest bg-white bg-opacity-10 px-3 py-1 rounded-full">
+                    Beneficios Clave
+                </span>
+                <h2 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
+                    ¿Por qué elegir un lote campestre?
+                </h2>
+                <p class="mt-3 text-white text-opacity-80">
+                    Naturaleza, plusvalía y libertad para construir tu próximo capítulo.
+                </p>
             </div>
+
+            <!-- Grid de beneficios -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card -->
+                <article
+                    class="p-8 bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-5">
+                        <i class="fas fa-mountain text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Naturaleza y bienestar</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Escapa del bullicio urbano y reconecta con la serenidad para mejorar tu calidad de vida.
+                    </p>
+                </article>
+
+                <article
+                    class="p-8 bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mb-5">
+                        <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Inversión inteligente</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Asegura tu patrimonio con alta plusvalía en una zona con crecimiento real.
+                    </p>
+                </article>
+
+                <article
+                    class="p-8 bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="w-14 h-14 rounded-full" style="background:#F2E7DA">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-home text-2xl" style="color:#8B4513"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Diseña a tu gusto</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Libertad total para construir la casa de tus sueños, a tu estilo y ritmo.
+                    </p>
+                </article>
+
+                <article
+                    class="p-8 bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="w-14 h-14 rounded-full bg-purple-50 flex items-center justify-center mb-5">
+                        <i class="fas fa-users text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Comunidad exclusiva</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Comparte entorno con personas que valoran la tranquilidad y el respeto por la naturaleza.
+                    </p>
+                </article>
+
+                <article
+                    class="p-8 bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="w-14 h-14 rounded-full bg-yellow-50 flex items-center justify-center mb-5">
+                        <i class="fas fa-sun text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Vida al aire libre</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Espacios amplios para deporte, parrillas y momentos inolvidables con tu gente.
+                    </p>
+                </article>
+
+                <article
+                    class="p-8 bg-white rounded-2xl shadow-xl transform transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-5">
+                        <i class="fas fa-shield-alt text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Seguridad y privacidad</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Entorno seguro, privado e ideal para tu familia y tus proyectos.
+                    </p>
+                </article>
+            </div>
+
+            <!-- CTA -->
             <div class="text-center mt-12">
                 <a href="#hero"
-                    class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    ¡Quiero registrarme al zoom!
+                    class="inline-flex items-center bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition duration-300 hover:scale-105 animate-pulse-scale">
+                    ¡Quiero registrarme al Zoom!
+                </a>
+                <p class="text-sm text-white text-opacity-80 mt-3">
+                    Cupos limitados para el tour virtual 👀
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-20" style="background-color:#0d3153">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-white leading-tight text-center">
+                Explora Nuestros Lotes Exclusivos
+            </h2>
+
+            <!-- Grid asimétrico -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-5 max-w-6xl mx-auto">
+
+                <!-- A) Grande horizontal -->
+                <article class="md:col-span-7 group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="relative w-full h-64 md:h-80">
+                        <img src="./img/amanecer-1.png" alt="Lote #1 - 2,500 m²"
+                            class="absolute inset-0 w-full h-full object-cover transform transition duration-500 group-hover:scale-105">
+                        <!-- Overlay -->
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+                            <p
+                                class="inline-block bg-white bg-opacity-90 text-gray-900 text-sm md:text-base font-semibold px-3 py-1 rounded-lg shadow">
+                                En desarrollo pistas y veredas
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- B) Alta vertical -->
+                <article class="md:col-span-5 group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="relative w-full h-80 md:h-full" style="min-height:20rem;">
+                        <img src="./img/amanecer-2.png" alt="Lote #2 - 1,800 m²"
+                            class="absolute inset-0 w-full h-full object-cover transform transition duration-500 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+                            <p
+                                class="inline-block bg-white bg-opacity-90 text-gray-900 text-sm md:text-base font-semibold px-3 py-1 rounded-lg shadow">
+                                Amplias áreas verdes
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- C) Mediana 1 -->
+                <article class="md:col-span-6 group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="relative w-full h-56 md:h-64">
+                        <img src="./img/amanecer-3.png" alt="Lote #3 - 1,500 m²"
+                            class="absolute inset-0 w-full h-full object-cover transform transition duration-500 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+                            <p
+                                class="inline-block bg-white bg-opacity-90 text-gray-900 text-sm md:text-base font-semibold px-3 py-1 rounded-lg shadow">
+                                Plantación de nispero
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- D) Mediana 2 -->
+                <article class="md:col-span-6 group relative overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="relative w-full h-56 md:h-64">
+                        <img src="./img/amanecer-4.png" alt="Lote #4 - 2,000 m²"
+                            class="absolute inset-0 w-full h-full object-cover transform transition duration-500 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-5">
+                            <p
+                                class="inline-block bg-white bg-opacity-90 text-gray-900 text-sm md:text-base font-semibold px-3 py-1 rounded-lg shadow">
+                                Plantación de palta
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- CTA opcional -->
+            <div class="text-center mt-10">
+                <a href="#hero"
+                    class="inline-flex items-center bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    Quiero más info de estos lotes
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="community" class="py-20 " style="background-color: #0d3153">
+
+    <section id="testimonials" class="py-20" style="background-color:#0d3153">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12 text-white leading-tight">Explora Nuestros Lotes Exclusivos</h2>
+            <h2 class="text-4xl font-bold text-white leading-tight">Lo que Nuestros Clientes Dicen</h2>
+            <p class="text-white opacity-80 max-w-2xl mx-auto mt-3 mb-12">
+                Historias reales de inversión y satisfacción. Mira sus experiencias 👇
+            </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-
-                <div
-                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+1" alt="Lote Campestre 1"
-                        class="w-full h-auto object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Lote #1 - 1,500 m²</p>
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <article
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:-translate-y-1">
+                    <div class="relative aspect-9-16 bg-black">
+                        <!-- REEMPLAZA src y poster -->
+                        <video class="absolute inset-0 w-full h-full object-cover" controls playsinline
+                            preload="metadata" poster="./img/mascara-patricia.jpg">
+                            <source src="./video/testimonio-patricia.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
-                </div>
+                </article>
 
-                <div
-                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+2" alt="Lote Campestre 2"
-                        class="w-full h-auto object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Lote #2 - 2,000 m²</p>
+                <!-- Card 2 -->
+                <article
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:-translate-y-1">
+                    <div class="relative aspect-9-16 bg-black">
+                        <video class="absolute inset-0 w-full h-full object-cover" controls playsinline
+                            preload="metadata" poster="./img/mascara-enrique.jpg">
+                            <source src="./video/testimonio-enrique.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
-                </div>
+                </article>
 
-                <div
-                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+3" alt="Lote Campestre 3"
-                        class="w-full h-auto object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Lote #3 - 1,800 m²</p>
+                <!-- Card 3 -->
+                <article
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:-translate-y-1">
+                    <div class="relative aspect-9-16 bg-black">
+                        <video class="absolute inset-0 w-full h-full object-cover" controls playsinline
+                            preload="metadata" poster="./img/mascara-veronica.jpg">
+                            <source src="./video/testimonio-veronica.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
-                </div>
-
-                <div
-                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+4" alt="Lote Campestre 4"
-                        class="w-full h-auto object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Lote #4 - 2,500 m²</p>
-                    </div>
-                </div>
-
-                <div
-                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+5" alt="Lote Campestre 5"
-                        class="w-full h-auto object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Lote #5 - 1,900 m²</p>
-                    </div>
-                </div>
-
-                <div
-                    class="relative overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-                    <img src="https://via.placeholder.com/600x400?text=Lote+Campestre+6" alt="Lote Campestre 6"
-                        class="w-full h-auto object-cover">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                        <p class="text-white text-lg font-semibold">Lote #6 - 3,000 m²</p>
-                    </div>
-                </div>
+                </article>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#hero"
+                    class="inline-flex items-center bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform transition duration-300 hover:scale-105 animate-pulse-scale">
+                    ¡Quiero ser parte de esta experiencia!
+                </a>
+                <p class="text-sm text-white text-opacity-80 mt-3">
+                    📣 Cupos limitados 👀
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-20" style="background-color: #0d3153">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12 text-white leading-tight">Lo que Nuestros Clientes Dicen</h2>
-            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                <div
-                    class="p-8 bg-blue-50 rounded-xl shadow-lg border-l-4 border-blue-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <p class="text-gray-700 italic text-lg mb-6 leading-relaxed">
-                        "Encontrar nuestro lote campestre fue un sueño hecho realidad. La tranquilidad, la naturaleza y
-                        la excelente atención superaron nuestras expectativas. ¡Estamos encantados!"
-                    </p>
-                    <div class="flex items-center justify-center">
-                        <img src="https://via.placeholder.com/60x60?text=Persona+1" alt="Testimonio de Juan Pérez"
-                            class="w-16 h-16 rounded-full mr-4 border-2 border-blue-400">
-                        <p class="font-semibold text-gray-900 text-lg">- Juan Pérez, Inversionista Feliz</p>
-                    </div>
-                </div>
-                <div
-                    class="p-8 bg-green-50 rounded-xl shadow-lg border-l-4 border-green-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <p class="text-gray-700 italic text-lg mb-6 leading-relaxed">
-                        "Desde el primer contacto hasta la firma, todo fue transparente y profesional. Ahora estamos
-                        construyendo la casa de nuestros sueños en un lugar paradisíaco. ¡Recomendado 100%!"
-                    </p>
-                    <div class="flex items-center justify-center">
-                        <img src="https://via.placeholder.com/60x60?text=Persona+2" alt="Testimonio de Ana Gómez"
-                            class="w-16 h-16 rounded-full mr-4 border-2 border-green-400">
-                        <p class="font-semibold text-gray-900 text-lg">- Ana Gómez, Nueva Propietaria</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer class="bg-gray-800 text-white py-10 text-center">
         <div class="container mx-auto px-6">
@@ -276,56 +400,70 @@
     </footer>
 
     <script>
-        document.querySelector('#contact form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const nombre = document.getElementById('nombre-form').value;
-            const telefono = document.getElementById('telefono-form').value;
-
-            alert(`Gracias, ${nombre}! Nos pondremos en contacto contigo al ${telefono} muy pronto.`);
-            this.reset();
-        });
-
         (function () {
-            const form = document.getElementById('lead-form');
-            const statusEl = document.getElementById('form-status');
-            const submitBtn = form.querySelector('button[type="submit"]');
+            // Asegurar que el DOM esté listo si el script no usa defer
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
 
-            const ENDPOINT = "https://getform.io/f/TU-ENDPOINT-REAL";
-            const REDIRECT_URL = "https://tusitio.com/gracias-tour-amanecer.html";
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                // UI: bloqueo + loader
-                submitBtn.disabled = true;
-                submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
-                submitBtn.innerText = 'Enviando…';
-                statusEl.textContent = 'Procesando tu registro...';
-
-                const fd = new FormData(form);
-                const customEndpoint = fd.get('__endpoint') || ENDPOINT;
-                fd.delete('__endpoint');
-
-                // 1) Disparo sin esperar (fire-and-forget)
-                try {
-                    fetch(customEndpoint, {
-                        method: 'POST',
-                        body: fd,
-                        keepalive: true // <- clave para no abortar al navegar
-                    });
-                } catch (err) {
-                    // Si falla, igual seguimos con la UX rápida (ver timeout abajo)
+            function init() {
+                const form = document.getElementById('lead-form');
+                if (!form) {
+                    console.error('[lead-form] no encontrado. Revisa el ID.');
+                    return;
                 }
 
-                // 2) Redirección inmediata (UX rápida)
-                const go = () => window.location.replace(REDIRECT_URL);
+                const statusEl = document.getElementById('form-status');
+                const submitBtn = form.querySelector('button[type="submit"]');
 
-                // 3) En la mayoría de casos, redirige YA:
-                //    Si quieres darle 300–600ms para que alcance a salir el request, usa setTimeout:
-                setTimeout(go, 400);
+                const ENDPOINT = "https://getform.io/f/aejevogb";
+                const REDIRECT_URL = "./gracias-tour-amanecer.html";
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
+                        submitBtn.innerText = 'Enviando…';
+                    }
+                    if (statusEl) statusEl.textContent = 'Procesando tu registro...';
+
+                    const fd = new FormData(form);
+                    const customEndpoint = fd.get('__endpoint') || ENDPOINT;
+                    fd.delete('__endpoint');
+
+                    let enviado = false;
+                    try {
+                        if (navigator.sendBeacon) {
+                            const params = new URLSearchParams();
+                            for (const [k, v] of fd.entries()) params.append(k, v);
+                            const blob = new Blob([params.toString()], { type: 'application/x-www-form-urlencoded;charset=UTF-8' });
+                            enviado = navigator.sendBeacon(customEndpoint, blob);
+                        }
+                    } catch (err) {
+                    }
+
+                    if (!enviado) {
+                        try {
+                            fetch(customEndpoint, { method: 'POST', body: fd, keepalive: true }).catch(() => { });
+                        } catch (err) { }
+                    }
+
+                    setTimeout(() => { window.location.replace(REDIRECT_URL); }, 200);
+                });
+            }
+        })();
+
+        (function () {
+            const vids = Array.from(document.querySelectorAll('#testimonials video'));
+            vids.forEach(v => {
+                v.addEventListener('play', () => {
+                    vids.forEach(o => { if (o !== v && !o.paused) o.pause(); });
+                });
             });
         })();
-    </script>
     </script>
 </body>
 
