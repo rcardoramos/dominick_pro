@@ -15,73 +15,135 @@
 
 <body class=" font-sans bg-gray-50">
     <!-- Barra de navegación -->
-    <header class="bg-gradient shadow-lg py-4 px-6  fixed w-full z-50 py-0">
-        <div class="container mx-auto px-4 py-auto">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <a href="../index.html"><img src="./img/LOGO-DPI-1080-AL-LIMITE.png"
-                            alt="Logo Dominick Pro Inmobiliaria" class="w-36"></a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="../index.html" class="bg-text hover:text-yellow-500 font-medium">Inicio</a>
-                    <a href="#lotes" class="bg-text hover:text-yellow-500 font-medium">Lotes Disponibles</a>
-                </div>
-                <button class="md:hidden focus:outline-none">
-                    <svg class="h-6 w-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7">
-                        </path>
+    <header role="banner"
+        class="fixed inset-x-0 top-0 z-50 bg-[#0d3153] backdrop-blur supports-backdrop-blur:border-b border-white/30 shadow-sm">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-3" aria-label="Dominick Pro Inmobiliaria - Inicio">
+                    <img src="./img/LOGO-DPI-1080-AL-LIMITE.png" alt="Logo Dominick Pro Inmobiliaria"
+                        class="h-10 w-auto">
+                </a>
+
+                <!-- Navegación desktop -->
+                <nav aria-label="Principal" class="hidden md:flex items-center gap-8">
+                    <a href="../index.html"
+                        class="text-white hover:text-yellow-500 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
+                        Inicio
+                    </a>
+                    <a href="#lotes"
+                        class="text-white hover:text-yellow-500 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
+                        Lotes Disponibles
+                    </a>
+                </nav>
+
+                <!-- Botón menú móvil -->
+                <button type="button"
+                    class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                    aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" id="menu-toggle">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                        <path class="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 7h16M4 12h16M4 17h16" />
+                        <path class="menu-icon-close hidden" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M6 6l12 12M18 6l-12 12" />
                     </svg>
                 </button>
+
             </div>
         </div>
+
+        <!-- Menú móvil -->
+        <nav id="mobile-menu" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur"
+            aria-label="Menú móvil">
+            <div class="mx-auto max-w-7xl px-4 py-3 space-y-1">
+                <a href="../index.html" class="block rounded px-3 py-2 text-slate-800 hover:bg-slate-100 font-medium">
+                    Inicio
+                </a>
+                <a href="#lotes" class="block rounded px-3 py-2 text-slate-800 hover:bg-slate-100 font-medium">
+                    Lotes Disponibles
+                </a>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative pt-24 pb-16 md:pt-32 md:pb-24">
-        <!-- <img src="https://placehold.co/1920x1080"
-            alt="Vista panorámica de terreno extenso con montañas al fondo y cielo despejado"
-            class="absolute inset-0 w-full h-full object-cover"> -->
-        <div class="hero-gradient absolute inset-0 w-full h-full"></div>
+    <section id="inicio"
+        class="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-r from-[#0d3153] via-[#1e3a8a] to-[#0d3153]">
+        <div class="absolute inset-0 bg-black/30"></div>
+
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Invierte en el futuro con
-                    nuestros<br><span class="text-yellow-500">lotes en provincias</span></h1>
-                <p class="text-lg text-white mb-8">Oportunidades únicas de inversión en terrenos con gran potencial de
-                    valorización. Seguridad jurídica garantizada.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="mx-auto max-w-3xl text-center">
+
+                <!-- Título -->
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    Invierte en el futuro con nuestros<br>
+                    <span class="text-yellow-300">lotes en provincias</span>
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="mt-6 text-base md:text-lg text-white/90">
+                    Oportunidades de alto potencial de valorización con
+                    <span class="font-semibold">seguridad jurídica garantizada</span>.
+                </p>
+
+                <!-- Botones -->
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#lotes"
-                        class="btn-transition bg-sky-400 hover:bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg">Ver
-                        Lotes Disponibles</a>
-                    <a href="https://wa.me/51908942105?text=Quiero%20mayor%20información%20de%20los%20lotes."
-                        target="_blank"
-                        class="btn-transition bg-white hover:bg-gray-100 text-sky-700 font-bold py-3 px-6 rounded-lg">Contactar
-                        Asesor</a>
+                        class="inline-flex items-center justify-center gap-2 rounded-lg bg-sky-500 px-6 py-3 font-semibold text-white shadow-lg hover:bg-yellow-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
+                        Ver Lotes Disponibles
+                    </a>
+
+                    <a href="https://wa.me/51908942105?text=Quiero%20mayor%20informaci%C3%B3n%20de%20los%20lotes."
+                        target="_blank" rel="noopener"
+                        class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-sky-700 shadow-lg ring-1 ring-white/40 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
+                        Contactar Asesor
+                    </a>
                 </div>
+
+                <!-- Indicador scroll -->
+                <a href="#lotes"
+                    class="mt-10 inline-flex items-center gap-2 text-white/80 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                    <span>Explorar lotes</span>
+                    <svg class="h-5 w-5 motion-safe:animate-bounce" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+
             </div>
         </div>
     </section>
 
     <!-- Sección de estadísticas -->
-    <section class="bg-white py-12">
+    <section class="bg-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div class="p-6">
-                    <h3 class="text-3xl font-bold text-yellow-500 mb-2">5+</h3>
-                    <p class="text-gray-600">Años de experiencia</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+                <!-- Años de experiencia -->
+                <div>
+                    <h3 class="text-4xl font-extrabold text-yellow-500">5+</h3>
+                    <p class="mt-2 text-gray-700">Años de experiencia</p>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-3xl font-bold text-yellow-500 mb-2">1600+</h3>
-                    <p class="text-gray-600">Lotes vendidos</p>
+
+                <!-- Lotes vendidos -->
+                <div>
+                    <h3 class="text-4xl font-extrabold text-yellow-500">1600+</h3>
+                    <p class="mt-2 text-gray-700">Lotes vendidos</p>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-3xl font-bold text-yellow-500 mb-2">12</h3>
-                    <p class="text-gray-600">Provincias con proyectos</p>
+
+                <!-- Provincias -->
+                <div>
+                    <h3 class="text-4xl font-extrabold text-yellow-500">12</h3>
+                    <p class="mt-2 text-gray-700">Provincias con proyectos</p>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-3xl font-bold text-yellow-500 mb-2">100%</h3>
-                    <p class="text-gray-600">Seguridad jurídica</p>
+
+                <!-- Seguridad -->
+                <div>
+                    <h3 class="text-4xl font-extrabold text-yellow-500">100%</h3>
+                    <p class="mt-2 text-gray-700">Seguridad jurídica</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -436,51 +498,118 @@
         </div>
     </section>
 
-
     <!-- Footer -->
+    <footer class="relative isolate overflow-hidden bg-gradient text-white">
+        <div class="container mx-auto px-4 py-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
-    <footer class="bg-gradient text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Información de la empresa -->
+                <!-- Marca -->
                 <div>
-                    <img src="./img/LOGO-DPI-1080-AL-LIMITE.png" alt="Logo dominickpro" class="w-36 mb-4">
-                    <p class="text-sm mb-4">Líder en la venta de terrenos con alto potencial de valorización. Ofrecemos
-                        oportunidades únicas para invertir en el futuro, con seguridad jurídica garantizada.</p>
+                    <a href="#inicio" class="inline-flex items-center gap-3 group" aria-label="Ir al inicio">
+                        <img src="./img/LOGO-DPI-1080-AL-LIMITE.png" alt="Logo Dominick Pro Inmobiliaria"
+                            class="w-36 h-auto transition-transform group-hover:scale-[1.02]">
+                    </a>
+                    <p class="mt-4 text-sm text-white/90 max-w-xs leading-relaxed">
+                        Líder en venta de terrenos con alto potencial de valorización.
+                        Inversión segura con <span class="font-semibold">seguridad jurídica garantizada</span>.
+                    </p>
                 </div>
 
-                <!-- Enlaces rápidos -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Enlaces rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#inicio" class="hover:text-yellow-300">Inicio</a></li>
-                        <li><a href="#lotes" class="hover:text-yellow-300">Lotes Disponibles</a></li>
+                <!-- Enlaces -->
+                <nav aria-label="Enlaces rápidos" class="sm:pl-2">
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#inicio"
+                                class="inline-flex items-center gap-2 hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                                <span class="h-1.5 w-1.5 rounded-full bg-yellow-400/80"></span> Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lotes"
+                                class="inline-flex items-center gap-2 hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                                <span class="h-1.5 w-1.5 rounded-full bg-yellow-400/80"></span> Lotes Disponibles
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Contacto -->
+                <div class="sm:pl-2">
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="https://wa.me/51908942105?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20lotes."
+                                target="_blank" rel="noopener"
+                                class="inline-flex items-center gap-2 hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                                <i class="fab fa-whatsapp text-xl"></i> WhatsApp: +51 908 942 105
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contacto@dominickpro.com"
+                                class="inline-flex items-center gap-2 hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                                <i class="fas fa-envelope text-lg"></i> contacto@dominickpro.com
+                            </a>
+                        </li>
+                        <li class="text-white/90">
+                            <i class="fas fa-clock mr-2"></i> L–S: 9:00–18:00
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Redes sociales -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/DominickProInmobiliaria" target="_blank"
-                            class="text-2xl hover:text-yellow-500"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/dominickproinmobiliaria/#" target="_blank"
-                            class="text-2xl hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+                <!-- Social -->
+                <div class="sm:pl-2">
+                    <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
+                    <div class="flex items-center gap-4 text-2xl">
+                        <a href="https://www.facebook.com/DominickProInmobiliaria" target="_blank" rel="noopener"
+                            aria-label="Facebook"
+                            class="hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dominickproinmobiliaria/#" target="_blank" rel="noopener"
+                            aria-label="Instagram"
+                            class="hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                         <a href="https://www.linkedin.com/company/dominick-pro-inmobiliaria/" target="_blank"
-                            class="text-2xl hover:text-yellow-500"><i class="fab fa-linkedin-in"></i></a>
+                            rel="noopener" aria-label="LinkedIn"
+                            class="hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
+
+                    <!-- CTA secundario -->
+                    <a href="#lotes"
+                        class="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-4 py-2.5 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300">
+                        Ver Lotes Disponibles
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Derechos Reservados centrados -->
-        <div class="text-center mt-8">
-            <p class="text-sm">&copy; 2025 Dominick Pro. Todos los derechos reservados.</p>
-            <p class="mt-2 text-xs">Hecho con 💙 por <a href="https://www.minddevperu.com/" target="_blank"
-                    class="text-blue-500 hover:text-red-200">Minddev</a>
-            </p>
+        <!-- Divider + barra inferior -->
+        <div class="border-t border-white/15">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/80">
+                    <p>&copy; <span id="year"></span> Dominick Pro. Todos los derechos reservados.</p>
+                    <div class="flex items-center gap-3">
+                        <a href="#inicio"
+                            class="inline-flex items-center gap-2 hover:text-yellow-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300 rounded"
+                            aria-label="Volver arriba">
+                            <i class="fas fa-arrow-up"></i> Volver arriba
+                        </a>
+                        <span class="hidden md:inline-block select-none">|</span>
+                        <p class="text-xs">
+                            Hecho con 💙 por
+                            <a href="https://www.minddevperu.com/" target="_blank" rel="noopener"
+                                class="underline decoration-white/30 underline-offset-4 hover:text-yellow-300">
+                                Minddev
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </footer>
 
     <!-- MODAL 1  -->
